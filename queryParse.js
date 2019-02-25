@@ -1,13 +1,11 @@
 // 将 json 转换为 queryString
 let queryParse = {
   cleanArray: function (actual) {
-    const newArray = [];
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i]) {
-        newArray.push(actual[i]);
+    return actual.map(item => {
+      if (item) {
+        return item;
       }
-    }
-    return newArray;
+    })
   },
 
   /**
